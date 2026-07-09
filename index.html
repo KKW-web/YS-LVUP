@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학생부 역량 강화 프로그램 | 동국대학교사범대학부속영석고등학교</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#141a2e; --sub:#5b6478; --line:#e6e9f2;
+  --navy:#0f1b3d; --navy2:#1b2a5e;
+  --auto:#2563eb; --auto-bg:#eaf1ff;
+  --career:#7c3aed; --career-bg:#f3ecff;
+  --club:#059669; --club-bg:#e6f7f1;
+  --sese:#ea580c; --sese-bg:#fff0e6;
+  --gold:#f5b301;
+  --grad:linear-gradient(120deg,#3b82f6,#8b5cf6 45%,#ec4899);
+  --shadow:0 10px 30px rgba(15,27,61,.08);
+  --shadow-lg:0 18px 50px rgba(15,27,61,.14);
+  --radius:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ---------- top banner ---------- */
+.school-ribbon{background:var(--navy);color:#cdd8ff;font-size:13px;text-align:center;padding:9px 14px;letter-spacing:.02em}
+.school-ribbon b{color:#fff}
+
+/* ---------- sticky nav ---------- */
+nav.top{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav.top .inner{max-width:1080px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:14px;overflow-x:auto;scrollbar-width:none}
+nav.top .inner::-webkit-scrollbar{display:none}
+.logo{font-weight:800;font-size:15px;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.logo .dot{width:10px;height:10px;border-radius:50%;background:var(--grad);display:inline-block}
+.navlinks{display:flex;gap:4px;margin-left:auto}
+.navlinks a{white-space:nowrap;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;padding:7px 12px;border-radius:999px;transition:.2s}
+.navlinks a:hover{background:#eef1f8;color:var(--ink)}
+
+/* ---------- hero ---------- */
+header.hero{background:radial-gradient(1200px 600px at 80% -10%,#2b3f8f 0%,transparent 60%),radial-gradient(900px 500px at 10% 110%,#3d2a7d 0%,transparent 55%),var(--navy);color:#fff;padding:72px 0 86px;position:relative;overflow:hidden}
+header.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.10) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.badge-school{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:600;margin-bottom:22px}
+.badge-school .star{color:var(--gold)}
+h1.title{font-size:clamp(30px,5.4vw,52px);font-weight:900;line-height:1.22;letter-spacing:-.02em}
+h1.title .grad{background:linear-gradient(120deg,#7db4ff,#c4a5ff 50%,#ffa3d1);-webkit-background-clip:text;background-clip:text;color:transparent}
+p.tagline{margin-top:18px;font-size:clamp(15px,2.4vw,18px);color:#c6d0ea;max-width:640px}
+.hero-stats{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.stat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:14px 22px;min-width:120px}
+.stat b{display:block;font-size:24px;font-weight:800}
+.stat span{font-size:12.5px;color:#aab6d8}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:36px}
+.flow .step{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);padding:9px 16px;border-radius:12px;font-size:14px;font-weight:700}
+.flow .arr{color:#8fa2d9;font-weight:800}
+.flow-label{font-size:12.5px;color:#93a3cf;margin-top:26px;letter-spacing:.06em;font-weight:700}
+
+/* ---------- section scaffolding ---------- */
+section{padding:72px 0 8px}
+.sec-eyebrow{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.1em;color:#7c3aed;background:#f3ecff;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+h2.sec-title{font-size:clamp(24px,3.6vw,34px);font-weight:900;letter-spacing:-.02em;line-height:1.3}
+p.sec-desc{color:var(--sub);margin-top:12px;max-width:700px;font-size:15.5px}
+
+/* ---------- finder ---------- */
+.finder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr));gap:14px;margin-top:34px}
+.finder-card{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:18px 20px;cursor:pointer;transition:.22s;display:flex;flex-direction:column;gap:8px;text-align:left;font-family:inherit}
+.finder-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#c8d4f5}
+.finder-card .q{font-size:15px;font-weight:700;line-height:1.5}
+.finder-card .a{font-size:13px;font-weight:800;display:inline-flex;align-items:center;gap:6px}
+.finder-card .a::after{content:"→";transition:.2s}
+.finder-card:hover .a::after{transform:translateX(3px)}
+
+/* ---------- overview table cards ---------- */
+.cat-legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.cat-chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:800;padding:8px 16px;border-radius:999px}
+.cat-chip i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.ov-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:16px;margin-top:22px}
+.ov-card{background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:4px solid;transition:.22s;position:relative;text-decoration:none;display:block}
+.ov-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.ov-card .tag{font-size:11.5px;font-weight:800;padding:4px 11px;border-radius:999px;display:inline-block;margin-bottom:12px}
+.ov-card h3{font-size:18.5px;font-weight:800;display:flex;align-items:center;gap:6px}
+.ov-card h3 .st{color:var(--gold)}
+.ov-card .rec{font-size:12.5px;color:var(--sub);margin-top:4px}
+.ov-card ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:6px}
+.ov-card ul li{font-size:13.5px;color:var(--sub);padding-left:20px;position:relative}
+.ov-card ul li::before{content:"✓";position:absolute;left:0;font-weight:800}
+.ov-card .go{margin-top:16px;font-size:13px;font-weight:800;display:inline-flex;gap:6px;align-items:center}
+.star-note{margin-top:18px;font-size:13px;color:var(--sub);background:#fffaea;border:1px solid #f3e3ab;border-radius:12px;padding:12px 16px;display:inline-block}
+.star-note b{color:#a07800}
+
+/* ---------- principle cards ---------- */
+.prin-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+@media(max-width:820px){.prin-grid{grid-template-columns:1fr}}
+.prin-card{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.prin-card h3{font-size:18px;font-weight:800;display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.prin-card .num{width:30px;height:30px;border-radius:10px;background:var(--grad);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0}
+.prin-card p.lead{font-size:14px;color:var(--sub);margin-bottom:16px}
+.mini-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.mini-table th{background:#f1f4fb;text-align:left;padding:9px 12px;font-weight:800;font-size:12.5px;color:#3f4a66;border-radius:6px 6px 0 0}
+.mini-table td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.mini-table td:first-child{font-weight:700;white-space:nowrap;color:#334}
+.mini-table tr:last-child td{border-bottom:none}
+
+/* ---------- activity detail ---------- */
+/* min-width:0 lets grid/flex children shrink below their content instead of forcing the layout wider than a narrow panel (prevents right-edge clipping) */
+.act-body>div,.act-body-inner>div,.comp-panel>div,.prin-grid>div,.ba-grid>div,.ex-pair>div,.blk{min-width:0}
+.act-wrap{margin-top:38px;display:flex;flex-direction:column;gap:26px}
+.act{background:var(--card);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:86px;border-left:6px solid}
+.act.hl{animation:flash 1.6s ease 2}
+@keyframes flash{0%,100%{box-shadow:var(--shadow)}50%{box-shadow:0 0 0 4px rgba(124,58,237,.35),var(--shadow-lg)}}
+.act-head{padding:30px 32px 6px}
+.act-head .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.pill{font-size:12px;font-weight:800;padding:5px 13px;border-radius:999px}
+.pill.rec{background:#101a3a;color:#fff}
+.act-head h3{font-size:clamp(20px,3vw,26px);font-weight:900;letter-spacing:-.01em}
+.act-head h3 .st{color:var(--gold)}
+.act-head p.desc{color:var(--sub);margin-top:10px;font-size:15px;max-width:760px}
+.act-body{padding:14px 32px 30px;display:grid;grid-template-columns:1.15fr .85fr;gap:28px}
+@media(max-width:860px){.act-body{grid-template-columns:1fr}}
+.blk h4{font-size:13px;font-weight:900;letter-spacing:.08em;color:#8a93ab;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.blk h4::before{content:"";width:16px;height:3px;border-radius:2px;background:var(--grad);display:inline-block}
+/* timeline */
+.tl{list-style:none;position:relative;display:flex;flex-direction:column;gap:0}
+.tl li{position:relative;padding:0 0 18px 40px;font-size:14.5px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:attr(data-n);position:absolute;left:0;top:-1px;width:26px;height:26px;border-radius:50%;background:#eef1fa;color:#39406b;font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;border:1.5px solid #d8def0}
+.tl li::after{content:"";position:absolute;left:12.5px;top:26px;bottom:0;width:1.5px;background:#e2e7f3}
+.tl li:last-child::after{display:none}
+/* submit chips */
+.subs{display:flex;flex-wrap:wrap;gap:8px}
+.subs span{background:#f1f4fb;border:1px solid #dfe5f2;font-size:13px;font-weight:700;padding:7px 13px;border-radius:10px;color:#39406b}
+/* cases */
+.case{border:1.5px solid var(--line);border-radius:14px;margin-top:10px;overflow:hidden}
+.case summary{cursor:pointer;list-style:none;padding:14px 18px;font-size:14px;font-weight:800;display:flex;align-items:center;gap:10px;background:#fafbfe;transition:.2s}
+.case summary::-webkit-details-marker{display:none}
+.case summary:hover{background:#f3f5fc}
+.case summary .cs-tag{font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;flex-shrink:0}
+.case summary .chev{margin-left:auto;transition:.25s;color:#98a1ba;font-size:12px}
+.case[open] summary .chev{transform:rotate(180deg)}
+.case .cs-body{padding:4px 18px 16px;font-size:14px;color:#3c445c}
+.case .cs-point{margin-top:10px;background:#fffaea;border-left:3px solid var(--gold);padding:9px 13px;border-radius:0 10px 10px 0;font-size:13px}
+.case .cs-point b{color:#a07800}
+.std-tip{margin-top:12px;font-size:12.5px;color:#5b6478;background:#f1f4fb;border:1px solid #dfe5f2;border-radius:12px;padding:11px 15px;line-height:1.7}
+.std-tip u{text-decoration:none;font-weight:800;color:#ea580c}
+/* checklist */
+.check{margin-top:6px;display:flex;flex-direction:column;gap:8px}
+.check label{display:flex;gap:11px;align-items:flex-start;background:#fafbfe;border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;font-size:14px;cursor:pointer;transition:.18s;user-select:none}
+.check label:hover{border-color:#c5cfec}
+.check input{appearance:none;width:20px;height:20px;border:2px solid #c2cbe2;border-radius:6px;flex-shrink:0;margin-top:1px;cursor:pointer;position:relative;transition:.15s;background:#fff}
+.check input:checked{background:var(--grad);border-color:transparent}
+.check input:checked::after{content:"✓";color:#fff;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900}
+.check label:has(input:checked){background:#f4f0ff;border-color:#d8c9f7;color:#4c2f8f}
+.prog{height:8px;background:#edf0f8;border-radius:99px;margin-top:12px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--grad);border-radius:99px;transition:.35s}
+.prog-txt{font-size:12px;font-weight:800;color:#7c3aed;margin-top:7px}
+/* link button */
+.linkbtn{display:inline-flex;align-items:center;gap:9px;background:var(--navy);color:#fff;text-decoration:none;font-size:14px;font-weight:800;padding:13px 22px;border-radius:14px;margin-top:18px;transition:.2s;box-shadow:0 6px 18px rgba(15,27,61,.25)}
+.linkbtn:hover{transform:translateY(-2px);background:var(--navy2)}
+.linkbtn .em{font-size:17px}
+/* day plan */
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:10px;margin-top:4px}
+.day{background:#fafbfe;border:1.5px solid var(--line);border-radius:14px;padding:14px}
+.day b{display:block;font-size:12px;color:var(--sese);font-weight:900;letter-spacing:.05em}
+.day .d-t{font-size:14px;font-weight:800;margin-top:5px}
+.day p{font-size:12.5px;color:var(--sub);margin-top:5px}
+
+/* ---------- competency ---------- */
+.comp-tabs{display:flex;gap:8px;margin-top:32px;flex-wrap:wrap}
+.comp-tab{font-family:inherit;font-size:14.5px;font-weight:800;padding:11px 22px;border-radius:999px;border:1.5px solid var(--line);background:#fff;cursor:pointer;transition:.2s;color:var(--sub)}
+.comp-tab.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.comp-panel{display:none;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px;margin-top:18px}
+.comp-panel.on{display:grid;grid-template-columns:1fr 1fr;gap:26px;animation:fadein .35s ease}
+@media(max-width:820px){.comp-panel.on{grid-template-columns:1fr}}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.comp-panel h4{font-size:15px;font-weight:900;margin-bottom:12px}
+.comp-panel ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.comp-panel ul li{font-size:14px;background:#fafbfe;border:1px solid var(--line);border-radius:12px;padding:11px 15px}
+.comp-panel ul li b{display:block;font-size:13.5px}
+.comp-lead{grid-column:1/-1;font-size:14.5px;color:#3c445c;background:#f4f0ff;border-left:4px solid var(--career);border-radius:0 12px 12px 0;padding:14px 18px}
+
+/* ---------- before/after ---------- */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:34px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+@media(max-width:820px){.ba-grid{grid-template-columns:1fr}}
+.ba-col{padding:28px}
+.ba-col.bad{background:#fdf3f3}
+.ba-col.good{background:#f0faf4}
+.ba-col h3{font-size:16.5px;font-weight:900;display:flex;align-items:center;gap:9px;margin-bottom:18px}
+.ba-col.bad h3{color:#c2410c}
+.ba-col.good h3{color:#047857}
+.ba-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ba-col li{font-size:14px;background:#fff;border-radius:12px;padding:11px 15px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.ba-col.bad li::before{content:"✕";color:#dc2626;font-weight:900;flex-shrink:0}
+.ba-col.good li::before{content:"✓";color:#059669;font-weight:900;flex-shrink:0}
+.ex-box{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;margin-top:20px}
+.ex-box h3{font-size:16px;font-weight:900;margin-bottom:14px}
+.ex-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:820px){.ex-pair{grid-template-columns:1fr}}
+.ex{border-radius:14px;padding:16px 18px;font-size:13.5px;line-height:1.7}
+.ex .lbl{font-size:11.5px;font-weight:900;letter-spacing:.06em;display:inline-block;margin-bottom:8px;padding:3px 10px;border-radius:999px}
+.ex.bad{background:#fdf3f3;color:#7f3131}
+.ex.bad .lbl{background:#fbdada;color:#b91c1c}
+.ex.good{background:#f0faf4;color:#14532d}
+.ex.good .lbl{background:#c9f0da;color:#047857}
+
+/* ---------- report frame ---------- */
+.rep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px;margin-top:34px}
+.rep{background:var(--card);border-radius:16px;padding:20px;box-shadow:var(--shadow);position:relative;transition:.2s}
+.rep:hover{transform:translateY(-3px)}
+.rep .n{font-size:26px;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rep b{display:block;font-size:15px;margin-top:4px}
+.rep p{font-size:13px;color:var(--sub);margin-top:5px}
+
+/* ---------- outro ---------- */
+.outro{background:var(--navy);border-radius:28px;color:#fff;padding:54px 40px;margin:80px 0 0;text-align:center;position:relative;overflow:hidden}
+.outro::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% -20%,rgba(124,92,255,.45),transparent 70%)}
+.outro *{position:relative}
+.outro h2{font-size:clamp(21px,3.4vw,30px);font-weight:900;line-height:1.4}
+.outro p{color:#bcc8e8;margin-top:16px;font-size:15px;max-width:640px;margin-left:auto;margin-right:auto}
+.outro .flow-mini{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:26px}
+.outro .flow-mini span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px}
+footer{padding:44px 20px 60px;text-align:center;color:#8a93ab;font-size:13px}
+footer b{color:#39406b}
+.privacy-note{max-width:1080px;margin:26px auto 0;padding:0 20px}
+.privacy-note div{font-size:12.5px;color:#77809a;background:#eef1f8;border-radius:12px;padding:12px 18px}
+
+/* category color helpers */
+.c-auto{color:var(--auto)} .bg-auto{background:var(--auto-bg);color:var(--auto)} .bd-auto{border-color:var(--auto)!important}
+.c-career{color:var(--career)} .bg-career{background:var(--career-bg);color:var(--career)} .bd-career{border-color:var(--career)!important}
+.c-club{color:var(--club)} .bg-club{background:var(--club-bg);color:var(--club)} .bd-club{border-color:var(--club)!important}
+.c-sese{color:var(--sese)} .bg-sese{background:var(--sese-bg);color:var(--sese)} .bd-sese{border-color:var(--sese)!important}
+.top-btn{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;border:none;font-size:18px;cursor:pointer;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:.25s;z-index:99}
+.top-btn.show{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+
+<div class="school-ribbon">🏫 본 자료는 <b>동국대학교사범대학부속영석고등학교</b> 학생들을 위한 학생부 역량 강화 프로그램 안내 페이지입니다.</div>
+
+<nav class="top">
+  <div class="inner">
+    <span class="logo"><span class="dot"></span>학생부 역량 강화 프로그램</span>
+    <div class="navlinks">
+      <a href="#finder">활동 찾기</a>
+      <a href="#overview">한눈에 보기</a>
+      <a href="#rules">공통 원칙</a>
+      <a href="#activities">활동별 안내</a>
+      <a href="#comp">3대 역량</a>
+      <a href="#goodbad">좋은 활동</a>
+      <a href="#report">보고서 틀</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge-school"><span class="star">★</span> 동국대학교사범대학부속영석고등학교 · 3학년</span>
+    <h1 class="title">나의 진로를<br><span class="grad">학생부 속 탐구</span>로 연결하다</h1>
+    <p class="tagline">학생부 역량 강화 프로그램은 활동을 '많이' 하는 것이 아니라, 나의 관심 분야를 진로와 연결하고 자료를 바탕으로 탐구하며, 그 과정을 결과물로 정리하는 프로그램입니다.</p>
+    <div class="hero-stats">
+      <div class="stat"><b>7개</b><span>선택 가능한 활동</span></div>
+      <div class="stat"><b>4개</b><span>학생부 기록 영역<br>(자율·진로·동아리·개세특)</span></div>
+      <div class="stat"><b>3대</b><span>대학 평가 역량<br>(학업·진로·공동체)</span></div>
+      <div class="stat"><b>5단계</b><span>탐구 활동의 흐름</span></div>
+    </div>
+    <p class="flow-label">GOOD FLOW — 좋은 활동의 흐름</p>
+    <div class="flow">
+      <span class="step">🎯 주제 선정</span><span class="arr">→</span>
+      <span class="step">🔍 자료 탐색</span><span class="arr">→</span>
+      <span class="step">🧪 분석·제작</span><span class="arr">→</span>
+      <span class="step">📢 발표·공유</span><span class="arr">→</span>
+      <span class="step">🌱 성찰·후속 탐구</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= FINDER ================= -->
+<section id="finder">
+  <div class="wrap">
+    <span class="sec-eyebrow">STEP 0 · 활동 찾기</span>
+    <h2 class="sec-title">나에게 맞는 활동, 10초 만에 찾기 ⚡</h2>
+    <p class="sec-desc">아래에서 나와 가장 가까운 문장을 눌러 보세요. 딱 맞는 활동으로 바로 이동합니다.</p>
+    <div class="finder-grid">
+      <button class="finder-card" data-go="act1"><span class="q">학급이나 학교 안에서 맡은 역할이 있다</span><span class="a c-auto">학교 내 역할</span></button>
+      <button class="finder-card" data-go="act2"><span class="q">전공 관련 사회·과학 이슈를 토론하고 싶다</span><span class="a c-auto">사회/과학 아고라</span></button>
+      <button class="finder-card" data-go="act3"><span class="q">도서나 논문으로 모둠 심화 연구를 하고 싶다</span><span class="a c-auto">아카데미 클러스터</span></button>
+      <button class="finder-card" data-go="act4"><span class="q">지역 사회 문제를 내 진로와 연결하고 싶다</span><span class="a c-career">지역 사회-전공 융합 프로젝트</span></button>
+      <button class="finder-card" data-go="act5"><span class="q">희망 전공의 핵심 주제를 깊게 파고들고 싶다</span><span class="a c-career">진로 주제 탐구 활동</span></button>
+      <button class="finder-card" data-go="act6"><span class="q">교과에서 배운 내용을 논문·도서와 연결하고 싶다</span><span class="a c-club">과제탐구형 심화연구반</span></button>
+      <button class="finder-card" data-go="act7"><span class="q">AI·데이터·앱·웹 같은 디지털 산출물을 만들고 싶다</span><span class="a c-sese">수업 유연화 주간</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+<section id="overview">
+  <div class="wrap">
+    <span class="sec-eyebrow">STEP 1 · 한눈에 보기</span>
+    <h2 class="sec-title">7개 활동, 4개 기록 영역 🗂️</h2>
+    <p class="sec-desc">자율활동은 공동체 안에서의 역할·협력·의사소통·책임감이 드러나야 하고, 진로활동은 관심 분야를 구체화하는 과정이 중요합니다. 각 활동이 학생부 어디에 기록되는지 확인하세요.</p>
+    <div class="cat-legend">
+      <span class="cat-chip bg-auto"><i style="background:var(--auto)"></i>자율 활동</span>
+      <span class="cat-chip bg-career"><i style="background:var(--career)"></i>진로 활동</span>
+      <span class="cat-chip bg-club"><i style="background:var(--club)"></i>동아리 활동</span>
+      <span class="cat-chip bg-sese"><i style="background:var(--sese)"></i>개인별 세특(개세특)</span>
+    </div>
+    <div class="ov-grid">
+      <a class="ov-card bd-auto" href="#act1" style="border-top-color:var(--auto)">
+        <span class="tag bg-auto">개인 활동</span>
+        <h3>학교 내 역할</h3>
+        <p class="rec">학생회 · 학급 임원 · 멘토링 · 1인 1역</p>
+        <ul><li>역할 수행 기록</li><li>협력·갈등 조율 사례</li></ul>
+        <span class="go c-auto">자세히 보기 →</span>
+      </a>
+      <a class="ov-card bd-auto" href="#act2" style="border-top-color:var(--auto)">
+        <span class="tag bg-auto">개인 활동</span>
+        <h3>사회/과학 아고라</h3>
+        <p class="rec">전공 관련 이슈 탐색 → 보고서 → 토론</p>
+        <ul><li>이슈 보고서 · 발표 자료</li><li>토론 기록</li></ul>
+        <span class="go c-auto">자세히 보기 →</span>
+      </a>
+      <a class="ov-card bd-auto" href="#act3" style="border-top-color:var(--auto)">
+        <span class="tag bg-auto">모둠 활동</span>
+        <h3>아카데미 클러스터 <span class="st">★</span></h3>
+        <p class="rec">도서·논문 기반 융복합 모둠 심화 연구</p>
+        <ul><li>독서·논문 연계 연구 보고서</li><li>발표 자료</li></ul>
+        <span class="go c-auto">자세히 보기 →</span>
+      </a>
+      <a class="ov-card bd-career" href="#act4" style="border-top-color:var(--career)">
+        <span class="tag bg-career">개인 활동</span>
+        <h3>지역 사회-전공 융합 프로젝트</h3>
+        <p class="rec">지역 문제 × 나의 진로 = 해결 방안</p>
+        <ul><li>지역 문제 분석 보고서</li><li>해결 방안 제안</li></ul>
+        <span class="go c-career">자세히 보기 →</span>
+      </a>
+      <a class="ov-card bd-career" href="#act5" style="border-top-color:var(--career)">
+        <span class="tag bg-career">개인 활동</span>
+        <h3>진로 주제 탐구 활동 <span class="st">★</span></h3>
+        <p class="rec">논문·도서·전공 자료 기반 심화 탐구</p>
+        <ul><li>심화 탐구 보고서</li><li>발표 자료 · 요약 카드</li></ul>
+        <span class="go c-career">자세히 보기 →</span>
+      </a>
+      <a class="ov-card bd-club" href="#act6" style="border-top-color:var(--club)">
+        <span class="tag bg-club">개인·모둠 활동</span>
+        <h3>과제탐구형 심화연구반 <span class="st">★</span></h3>
+        <p class="rec">1·2학년 교과 활동과 연결되는 심화 탐구</p>
+        <ul><li>교과 심화 탐구 보고서</li><li>도서·논문 분석표</li></ul>
+        <span class="go c-club">자세히 보기 →</span>
+      </a>
+      <a class="ov-card bd-sese" href="#act7" style="border-top-color:var(--sese)">
+        <span class="tag bg-sese">개인·모둠 활동</span>
+        <h3>수업 유연화 주간 <span class="st">★</span></h3>
+        <p class="rec">AI·데이터·앱·웹·디지털 콘텐츠 4일 프로젝트</p>
+        <ul><li>디지털 산출물 + 개인 보고서</li><li>연계: AI 4DAY 페이지</li></ul>
+        <span class="go c-sese">자세히 보기 →</span>
+      </a>
+    </div>
+    <p class="star-note"><b>★ 표시</b>는 탐구 심화도가 높아 특히 추천하는 활동입니다. 어떤 활동이든 <b>흐름이 분명하면</b> 의미 있는 기록이 됩니다.</p>
+  </div>
+</section>
+
+<!-- ================= COMMON RULES ================= -->
+<section id="rules">
+  <div class="wrap">
+    <span class="sec-eyebrow">STEP 2 · 공통 원칙</span>
+    <h2 class="sec-title">어떤 활동을 골라도, 아래 2가지는 꼭 🔑</h2>
+    <div class="prin-grid">
+      <div class="prin-card">
+        <h3><span class="num">1</span>진로와 연결하기</h3>
+        <p class="lead">주제는 반드시 아래 중 하나와 연결합니다.</p>
+        <table class="mini-table">
+          <tr><th>연결 기준</th><th>예시</th></tr>
+          <tr><td>희망 학과</td><td>인공지능학과, 건축학과, 경영학과, 의예과, 생명공학과 등</td></tr>
+          <tr><td>관심 분야</td><td>환경, 도시, 보건, 교육, 경제, AI, 생명과학 등</td></tr>
+          <tr><td>전공 관련 이슈</td><td>고위험 AI 규제, 지역 격차, 탄소중립, 의료 접근성 등</td></tr>
+          <tr><td>1·2학년 활동</td><td>이전 탐구의 확장 또는 심화</td></tr>
+          <tr><td>교과 수업</td><td>수업에서 배운 개념을 실제 문제에 적용</td></tr>
+        </table>
+      </div>
+      <div class="prin-card">
+        <h3><span class="num">2</span>과정 기록하기</h3>
+        <p class="lead">보고서에는 결과만 쓰지 말고 아래 내용을 남깁니다.</p>
+        <table class="mini-table">
+          <tr><th>기록할 내용</th><th>쓰는 방법</th></tr>
+          <tr><td>주제 선정 이유</td><td>왜 이 주제를 선택했는가</td></tr>
+          <tr><td>진로 관련성</td><td>내 관심 분야와 어떻게 연결되는가</td></tr>
+          <tr><td>자료 출처</td><td>뉴스, 도서, 논문, 통계, 강연 등</td></tr>
+          <tr><td>탐구 과정</td><td>어떤 순서로 조사·분석·제작했는가</td></tr>
+          <tr><td>어려움 → 해결</td><td>막힌 지점과 추가 조사·질문·수정 과정</td></tr>
+          <tr><td>후속 탐구</td><td>더 탐구한다면 무엇을 할 것인가</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACTIVITIES ================= -->
+<section id="activities">
+  <div class="wrap">
+    <span class="sec-eyebrow">STEP 3 · 활동별 안내</span>
+    <h2 class="sec-title">활동별 상세 가이드 & 우수 사례 📚</h2>
+    <p class="sec-desc">각 활동의 흐름, 제출물, 실제 선배 우수 사례, 제출 전 체크리스트까지 담았습니다. 사례는 펼쳐서 확인하고, 체크리스트는 직접 눌러 점검하세요.</p>
+  </div>
+
+  <div class="wrap act-wrap">
+
+    <!-- ACT 1 -->
+    <article class="act bd-auto" id="act1" style="border-left-color:var(--auto)">
+      <div class="act-head">
+        <div class="meta"><span class="pill bg-auto">자율 활동</span><span class="pill" style="background:#eef1fa;color:#39406b">개인</span></div>
+        <h3>1. 학교 내 역할</h3>
+        <p class="desc">학생회, 학급 임원, 멘토링, 1인 1역 등 학교 안에서 맡은 역할을 책임 있게 수행하는 활동입니다. <b>작은 역할이라도</b> 공동체 안에서 어떤 노력을 했는지가 핵심입니다.</p>
+      </div>
+      <div class="act-body">
+        <div>
+          <div class="blk">
+            <h4>활동 흐름</h4>
+            <ul class="tl">
+              <li data-n="1">내가 맡은 역할 정리하기</li>
+              <li data-n="2">공동체 안에서 해결할 문제 찾기</li>
+              <li data-n="3">역할 수행 과정 기록하기</li>
+              <li data-n="4">협력·조율·책임 수행 사례 정리하기</li>
+            </ul>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>우수 사례</h4>
+            <details class="case">
+              <summary><span class="cs-tag bg-auto">학급 회장 · 문제해결형</span>교육 격차 해소 공약을 실제 행동으로<span class="chev">▼</span></summary>
+              <div class="cs-body">1학기 학급 회장으로 활동하며 학급 내 교육 격차 해소를 공약으로 내세우고 이를 이행하기 위해 노력함. 정보 격차와 학습의 관성을 문제 원인으로 인식하고, 시험 자료 공유 사이트를 개설하였으며 학급 멘토링 모임을 스스로 조직함. 또한 공부 시간을 측정할 수 있는 앱을 개발하여 목표 시간을 지킨 학생들에게 보상을 제공함. 이 과정에서 문제 해결 능력과 이타적인 태도를 보여줌.
+                <div class="cs-point"><b>포인트</b> — 공약(문제 인식) → 사이트·멘토링·앱(실행) → 태도(성찰)로 이어지는 흐름이 분명합니다.</div>
+              </div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-auto">1인 1역 · 공학형</span>‘날씨 알리미’ 자동화 시스템 구축<span class="chev">▼</span></summary>
+              <div class="cs-body">1인 1역 활동에서 ‘날씨 알리미’ 역할을 맡아, 날씨 정보를 정확하게 전달하는 것이 학급 학생들의 건강에 큰 기여를 할 수 있을 것이라 믿고 날씨 공유 자동화 시스템을 구축함. 기상청 RSS 서비스를 이용해 매일 업데이트되는 날씨 XML 파일에서 중요한 요소들을 아두이노와 ESP8266으로 추출하고, 타이머 기능을 이용하여 친구들이 이를 매일 확인할 수 있는 장치를 개발함. 문제를 파악하고 해결하는 방식이 매우 창의적이고 뛰어나며, 사람을 위한 기술 개발의 가치를 아는 윤리적 태도가 돋보임.<div class="cs-point"><b>포인트</b> — 단순 역할 수행을 넘어 맡은 역할을 진로(공학)와 연결해 실제 작동하는 장치까지 만든 점이 강점입니다.</div></div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-auto">1인 1역 · 자기주도형</span>직접 만든 ‘경제 시사 알리미’<span class="chev">▼</span></summary>
+              <div class="cs-body">평소 관심 있는 경제·경영 분야와 관련지어 ‘경제 시사 알리미’라는 학급 내 1인 1역을 스스로 만들어 제안함. 고환율과 무역수지 적자, 금리 인상과 물가 상승세, 국내 대표 기업의 외국 기업 인수 등 매달 경제 시사 이슈를 선정해 분석·정리하고, 이달의 경제 뉴스를 꾸준하게 발간하여 교실 뒤 게시판에 게시함으로써 친구들이 전반적인 경제 상황에 관심을 기울이고 경제 지식을 공부할 수 있는 기회를 제공함.<div class="cs-point"><b>포인트</b> — 주어진 역할이 아니라 스스로 역할을 ‘설계’하고 꾸준히 지속했다는 점에서 주도성과 전공적합성이 함께 드러납니다.</div></div>
+            </details>
+          </div>
+        </div>
+        <div>
+          <div class="blk">
+            <h4>제출물</h4>
+            <div class="subs"><span>역할 수행 기록</span><span>학교 기여 사례</span><span>협력·갈등 조율 사례</span><span>성찰문</span></div>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>제출 전 점검</h4>
+            <div class="check" data-check>
+              <label><input type="checkbox">내가 맡은 역할이 구체적인가</label>
+              <label><input type="checkbox">공동체 문제를 발견했는가</label>
+              <label><input type="checkbox">문제 해결을 위해 실제로 한 일이 드러나는가</label>
+              <label><input type="checkbox">친구들과 협력하거나 조율한 과정이 있는가</label>
+              <label><input type="checkbox">단순 성실함이 아닌 책임감·공동체 의식이 드러나는가</label>
+            </div>
+            <div class="prog"><i></i></div>
+            <div class="prog-txt">0 / 5 항목 확인</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ACT 2 -->
+    <article class="act bd-auto" id="act2" style="border-left-color:var(--auto)">
+      <div class="act-head">
+        <div class="meta"><span class="pill bg-auto">자율 활동</span><span class="pill" style="background:#eef1fa;color:#39406b">개인</span></div>
+        <h3>2. 사회/과학 아고라</h3>
+        <p class="desc">전공과 관련된 사회·과학 이슈를 탐색하고, 보고서 작성·발표·토론으로 확장하는 활동입니다. 단순 뉴스 요약이 아니라 <b>쟁점과 나의 관점</b>이 드러나야 합니다.</p>
+      </div>
+      <div class="act-body">
+        <div>
+          <div class="blk">
+            <h4>활동 흐름</h4>
+            <ul class="tl">
+              <li data-n="1">전공 관련 시사 이슈 찾기</li>
+              <li data-n="2">뉴스·도서·통계 자료 조사하기</li>
+              <li data-n="3">쟁점과 찬반 논거 정리하기</li>
+              <li data-n="4">보고서 작성하기</li>
+              <li data-n="5">발표·토론 후 의견 반영하기</li>
+            </ul>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>우수 사례</h4>
+            <details class="case">
+              <summary><span class="cs-tag bg-auto">AI 규제 쟁점형</span>고위험 인공지능 방지법 토론<span class="chev">▼</span></summary>
+              <div class="cs-body">학급 특색 활동인 과학 아고라에 자발적으로 참여하여, 인공지능 분야 기술 개발의 가이드라인이 되는 ‘위험 분야 인공지능방지법 도입과 고위험성 기술’을 심화 탐구함. 관련 정보를 제공하고 설문을 통해 논제를 선정하여 학급 학생들과 토론을 진행함. 인공지능 방지법에 찬성하며 적절한 논거를 들어 자신의 주장을 논리적으로 피력함. 이 과정에서 인공지능의 예측 모델인 의사결정나무와 랜덤포레스트를 통해 인공지능이 작동한다는 것을 알고 심화 학습을 계획함.<div class="cs-point"><b>포인트</b> — 찬반 토론에서 자신의 입장을 논거로 세우고, 나아가 AI 작동 원리(의사결정나무·랜덤포레스트)까지 심화 학습으로 연결한 점이 돋보입니다.</div></div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-auto">우주 자원 분쟁형</span>달의 국가 간 분할 점유 쟁점<span class="chev">▼</span></summary>
+              <div class="cs-body">과학 아고라 활동에 ‘달의 특정 국가 간 분할 점유’를 주제로 참여함. 다른 천체들을 얻기 위한 국가 간 경쟁이 가속될 것이기 때문에 달을 공유화해야 한다는 주장에 대해, 자원 채취와 최적화된 위치 선점 이슈로 국가 간 갈등이 발생할 수 있다고 반박함. 절충안으로 자원 탐사는 국가별로 적절히 배분하는 협약을 구체적으로 맺고, 공동 연구 및 발사 기지를 설치하여 국가 간 분쟁을 최소화하는 방안을 제안함.
+                <div class="cs-point"><b>포인트</b> — 반대 근거 제시에서 그치지 않고 '절충안'까지 구체적으로 설계했습니다.</div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div>
+          <div class="blk">
+            <h4>제출물</h4>
+            <div class="subs"><span>이슈 탐색 보고서</span><span>발표 자료</span><span>토론 기록</span><span>후속 탐구 계획</span></div>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>제출 전 점검</h4>
+            <div class="check" data-check>
+              <label><input type="checkbox">주제가 내 진로·관심 분야와 연결되는가</label>
+              <label><input type="checkbox">단순 뉴스 요약이 아니라 쟁점이 드러나는가</label>
+              <label><input type="checkbox">찬성·반대 등 다양한 관점을 비교했는가</label>
+              <label><input type="checkbox">내 의견에 근거가 있는가</label>
+              <label><input type="checkbox">토론 후 생각의 변화나 후속 탐구가 있는가</label>
+            </div>
+            <div class="prog"><i></i></div>
+            <div class="prog-txt">0 / 5 항목 확인</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ACT 3 -->
+    <article class="act bd-auto" id="act3" style="border-left-color:var(--auto)">
+      <div class="act-head">
+        <div class="meta"><span class="pill bg-auto">자율 활동</span><span class="pill" style="background:#eef1fa;color:#39406b">모둠</span><span class="pill rec">★ 추천</span></div>
+        <h3>3. 아카데미 클러스터 <span class="st">★</span></h3>
+        <p class="desc">진로 관련 융복합 주제를 정하고, 도서·논문을 바탕으로 모둠 심화 연구를 진행하는 활동입니다. 조사에 그치지 않고 <b>분석·계산·비교</b>가 드러나야 합니다.</p>
+      </div>
+      <div class="act-body">
+        <div>
+          <div class="blk">
+            <h4>활동 흐름</h4>
+            <ul class="tl">
+              <li data-n="1">진로 관련 연구 주제 정하기</li>
+              <li data-n="2">전공별 추천 도서·논문 찾기</li>
+              <li data-n="3">핵심 개념 정리하기</li>
+              <li data-n="4">모둠 역할 나누기</li>
+              <li data-n="5">독서·논문 연계 연구 보고서 작성하기</li>
+            </ul>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>우수 사례</h4>
+            <details class="case">
+              <summary><span class="cs-tag bg-auto">생명·AI 융합형</span>알파폴드 기반 백신 에피토프 예측<span class="chev">▼</span></summary>
+              <div class="cs-body">과학 아카데미 클러스터 자율활동을 통해 알파폴드를 활용한 단백질 구조 예측과 면역학의 핵심 개념인 항원-항체 반응에 대한 조사와 탐구를 수행함. 특히 백신 개발의 중요한 요소인 에피토프 예측을 주제로 설정하고, AI 기반 예측 모델과 생명과학 지식을 융합하여 심화된 탐색을 시도함. 딥러닝 프로그램을 활용한 데이터 분석을 통해 생물학적 구조 예측의 효율성과 과학적 타당성을 이해하였으며, 자료 조사와 분석, 결과 도출 전 과정을 스스로 계획하고 협력하며 주도적으로 실천함. <em>(서울대 식품동물생명공학부·KAIST·의예과 합격 사례)</em><div class="cs-point"><b>포인트</b> — AI(알파폴드)와 생명과학 지식을 융합해, 조사에 그치지 않고 데이터 분석으로 타당성을 검증한 융복합 탐구입니다.</div></div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-auto">공학·우주기술형</span>레일건·코일건 자기장 차폐 연구<span class="chev">▼</span></summary>
+              <div class="cs-body">학급특색활동인 아카데미 클러스터의 일환으로 ‘레일건과 코일건의 자기장 문제 해결 방안’에 대한 연구 활동을 수행함. 전자기장이 발사체에 탑재된 인공위성 등 탑재체에 악영향을 끼칠 수 있어 해결 방법을 탐구함. 회로 구성을 통한 자기장 상쇄는 근본적으로 불가능하다는 것을 깨닫고, 직접 코일건과 차폐 장치를 만들어 자기장을 차폐할 수 있는 방안을 연구함. 코일건의 전압을 늘려가며 자기장 차단층 너머의 자기장을 측정하고, 우주 발사체 발사 시 차단해야 하는 자기장의 세기와 필요한 차폐 장치의 두께를 계산함.<div class="cs-point"><b>포인트</b> — ‘회로로는 불가능’이라는 실패를 인정하고, 직접 차폐 장치를 만들어 측정·계산까지 나아간 끈기가 강점입니다.</div></div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-auto">에너지·건축형</span>에너지 제로하우스 설계<span class="chev">▼</span></summary>
+              <div class="cs-body">학급 특색 활동인 아카데미 클러스터에서 ‘태양광 발전과 단열재를 중심으로 하는 에너지 제로하우스 설계’를 주제로 연구 활동을 수행함. Tinkercad 프로그램을 활용하여 태양전지의 전류·전압 특성 곡선과 최대 출력 지점을 분산형 차트로 표현하고, 최대 전력점 추적을 통해 다양한 외부 조건에서 최대 전력을 생산할 수 있는 방법을 탐구함. 또한 태양전지의 광 효율을 향상할 수 있는 기술과 소재를 조사하고, 단열재의 열전도율과 효율을 열역학적 관점에서 해석함.
+                <div class="cs-point"><b>포인트</b> — 도구(Tinkercad)와 계산이 결합되어 '실제 탐구'가 드러납니다.</div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div>
+          <div class="blk">
+            <h4>제출물</h4>
+            <div class="subs"><span>독서 기록</span><span>논문·자료 분석표</span><span>모둠 연구 보고서</span><span>발표 자료</span></div>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>제출 전 점검</h4>
+            <div class="check" data-check>
+              <label><input type="checkbox">주제가 융복합적인가</label>
+              <label><input type="checkbox">도서·논문을 실제 탐구에 활용했는가</label>
+              <label><input type="checkbox">모둠 안에서 내 역할이 분명한가</label>
+              <label><input type="checkbox">조사에 그치지 않고 분석·계산·비교가 있는가</label>
+              <label><input type="checkbox">연구 결과와 느낀 점이 진로와 연결되는가</label>
+            </div>
+            <div class="prog"><i></i></div>
+            <div class="prog-txt">0 / 5 항목 확인</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ACT 4 -->
+    <article class="act bd-career" id="act4" style="border-left-color:var(--career)">
+      <div class="act-head">
+        <div class="meta"><span class="pill bg-career">진로 활동</span><span class="pill" style="background:#eef1fa;color:#39406b">개인</span></div>
+        <h3>4. 지역 사회-전공 융합 프로젝트</h3>
+        <p class="desc">내 관심 분야와 지역 사회 문제를 연결하여 해결 방안을 모색하는 활동입니다. 지역의 <b>구체적인 문제</b>를 발견하고 진로와 연결된 해결책을 제시하는 것이 핵심입니다.</p>
+      </div>
+      <div class="act-body">
+        <div>
+          <div class="blk">
+            <h4>활동 흐름</h4>
+            <ul class="tl">
+              <li data-n="1">지역 사회 문제 발견하기</li>
+              <li data-n="2">내 진로와 연결되는 지점 찾기</li>
+              <li data-n="3">원인과 현황 조사하기</li>
+              <li data-n="4">해결 방안 제안하기</li>
+              <li data-n="5">보고서 또는 제안문 작성하기</li>
+            </ul>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>우수 사례</h4>
+            <details class="case">
+              <summary><span class="cs-tag bg-career">지리학·범죄율형</span>지역 범죄율 개선 방안 도출<span class="chev">▼</span></summary>
+              <div class="cs-body">지역사회 전공 융합 프로젝트에서 ‘지역사회 범죄율 탐구에 따른 개선 방안 도출’을 주제로 활동함. 페르미 추정 활동으로 다른 지역에 비해 지역사회의 범죄율이 높다는 사실을 추정하고 실제 통계자료와 비교·분석함. 그 결과 지역사회 내 범죄 피해 두려움 감소를 위해 구성원 간 유대감 증진 프로그램 마련, 구조적 차원의 개선 등의 정책을 제언함. 『범죄와 형벌』을 참고하여 기초적 지식을 넓히고 일련의 과정을 영상으로 제작하여 급우들에게 발표함. 나아가 직접 시의회에 정책 제언을 하는 등 지역사회 문제 해결에 참여함.<div class="cs-point"><b>포인트</b> — 페르미 추정 → 통계 검증 → 정책 제언 → 시의회 참여까지, 탐구가 실제 사회 참여로 이어졌습니다.</div></div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-career">AI·공학형</span>하수구 이물질 탐지기 제작<span class="chev">▼</span></summary>
+              <div class="cs-body">지역사회 전공융합 프로젝트에서 하수구 이물질 탐지기 제작을 주제로 활동함. 장마철 침수 피해가 하수구에 버려진 쓰레기와 관련될 수 있다는 문제의식에서 출발하고, 『사회심리학』을 읽으며 깨진 유리창 이론이 해당 현상과 관련될 수 있음을 추론함. 이후 아두이노와 센서를 활용하여 이물질 유무를 감지하고, 휴대전화로 정보를 송신하는 시스템을 구축하는 방향으로 지역 문제 해결 방안을 구체화함.
+                <div class="cs-point"><b>포인트</b> — 인문 도서(사회심리학)에서 출발해 공학적 해결로 이어진 융합이 돋보입니다.</div>
+              </div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-career">공학·정책제안형</span>버스 혼잡도 개선 안내 프로그램<span class="chev">▼</span></summary>
+              <div class="cs-body">지역사회 전공 융합 프로젝트에서 혼잡도 개선을 위한 버스 정차 안내 프로그램 만들기를 주제로 정책 제안 활동을 진행함. 정류장에 정차할 버스 번호를 기사에게 안내하는 표지판 제작을 제안함. 생활 속 불편을 인지하고 해결책을 모색하는 과정에서 창의력과 문제 해결력을 보임. ‘만들면서 배우는 아두이노 IoT 사물인터넷과 40개의 작품들’을 탐독하여 코딩 지식을 익히고, 아두이노와 데이터베이스 기술을 활용하여 탑승자의 승차 여부 데이터를 기사에게 전송하는 프로그램을 제작함. 문제 해결을 위해 순차적 구조와 알고리즘을 설계하며 실현하는 과정에서 뛰어난 공학도로서의 자질을 보임.<div class="cs-point"><b>포인트</b> — ‘생활 속 불편’이라는 지역 문제에서 출발해 도서 학습 → 실제 작동 프로그램 제작으로 이어진 흐름이 분명합니다.</div></div>
+            </details>
+          </div>
+        </div>
+        <div>
+          <div class="blk">
+            <h4>제출물</h4>
+            <div class="subs"><span>지역 문제 분석 보고서</span><span>해결 방안 제안서</span><span>건의문·카드뉴스·웹페이지 중 선택</span><span>자료 출처 목록</span></div>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>제출 전 점검</h4>
+            <div class="check" data-check>
+              <label><input type="checkbox">지역 사회의 구체적인 문제를 발견했는가</label>
+              <label><input type="checkbox">문제를 자료나 사례로 확인했는가</label>
+              <label><input type="checkbox">내 진로와 연결되는 해결 방안을 제시했는가</label>
+              <label><input type="checkbox">보고서·제안문·카드뉴스 등 결과물이 있는가</label>
+              <label><input type="checkbox">지역 사회에 어떤 기여를 할 수 있는지 드러나는가</label>
+            </div>
+            <div class="prog"><i></i></div>
+            <div class="prog-txt">0 / 5 항목 확인</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ACT 5 -->
+    <article class="act bd-career" id="act5" style="border-left-color:var(--career)">
+      <div class="act-head">
+        <div class="meta"><span class="pill bg-career">진로 활동</span><span class="pill" style="background:#eef1fa;color:#39406b">개인</span><span class="pill rec">★ 추천</span></div>
+        <h3>5. 진로 주제 탐구 활동 <span class="st">★</span></h3>
+        <p class="desc">희망 전공과 관련된 주제를 정하고, 논문·도서·전공 자료를 활용해 깊이 있게 탐구하는 활동입니다. 자료를 <b>단순 요약하지 않고 내 관점으로 분석</b>하는 것이 관건입니다.</p>
+      </div>
+      <div class="act-body">
+        <div>
+          <div class="blk">
+            <h4>활동 흐름</h4>
+            <ul class="tl">
+              <li data-n="1">전공 가이드북을 참고해 탐구 방향 정하기</li>
+              <li data-n="2">1·2학년 활동 중 이어 갈 주제 찾기</li>
+              <li data-n="3">논문·도서·학과 홈페이지 자료 탐색하기</li>
+              <li data-n="4">핵심 개념과 연구 질문 정리하기</li>
+              <li data-n="5">심화 탐구 보고서 작성하기</li>
+            </ul>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>우수 사례</h4>
+            <details class="case">
+              <summary><span class="cs-tag bg-career">원자력·에너지형</span>사용 후 핵연료 재처리 탐구<span class="chev">▼</span></summary>
+              <div class="cs-body">핵폐기물 임시 보관 시설의 수용력이 한계에 다다르고 있다는 자료를 접하며 핵폐기물 처리 문제에 관심을 갖고, ‘사용 후 핵연료 재처리 과정’에 대한 진로 주제 탐구 활동을 진행함. 우라늄 광물을 핵연료로 사용하기 위한 우라늄 농축 방법부터 원자로 가동, 사용 후 핵연료 처리 및 처분까지 핵연료 주기 전반을 탐구함. 사용 후 핵연료 재처리를 통해 핵폐기물의 부피와 발열을 줄일 수 있다고 예측하고, 퓨렉스 공법과 파이로프로세싱을 조사함. 순수한 플루토늄을 추출할 수 있는 퓨렉스 공법과 달리, 아메리슘·큐리움 등 초우라늄핵종이 함께 추출되는 파이로프로세싱이 핵확산저항성 측면에서 우수하다고 평가함. 재처리 이후 남은 폐기물 처분장 문제와 플루토늄 재사용 안전성 문제를 인식하고, 소듐 냉각 고속로 개발에 관심을 확장함.<div class="cs-point"><b>포인트</b> — 두 공법을 ‘핵확산저항성’이라는 기준으로 비교·평가하고, 후속 관심까지 확장한 점이 인상적입니다.</div></div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-career">의생명·데이터형</span>응급실 재이송 회귀분석<span class="chev">▼</span></summary>
+              <div class="cs-body">AI 데이터 마이닝을 통한 탐구 주제 분석 프로그램에 참여함. 진로 활동에서 응급실 재이송 문제를 탐구하던 중, 지역별 인구 수당 병상 수가 부족한 지역에서 재이송 사례가 많이 발생했을 것이라는 가설을 세움. 공공데이터포털과 통계청 자료를 전처리하고, 지역당 연령별 인구수를 독립변수로, 병실 수를 종속변수로 설정하여 선형회귀 분석 모델을 적용함. 모델 성능을 최소제곱법으로 확인한 결과 변수 간 선형적 관계가 없다는 결론을 도출함. 추가 조사 결과 재이송 발생 원인 중 병상 부족보다 전문의 부재가 더 큰 비율을 차지한다는 문제를 발견하고, 설명 변수 사이의 다중공선성 문제를 분석한 뒤 주성분분석 등을 활용한 차원 축소 방안을 탐구함.
+                <div class="cs-point"><b>포인트</b> — 가설이 '틀렸다'는 결과에서 멈추지 않고 원인 재분석·후속 기법까지 나아갔습니다.</div>
+              </div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-career">환경·보건형</span>하천 수질 검사 실험<span class="chev">▼</span></summary>
+              <div class="cs-body">수질 검사 항목으로 전염병에 영향을 미치는 세균과 유기물의 양, 탁도가 있다는 것을 알고, 유기물의 양에 따라 환경오염 정도를 알려주는 수질 검사 키트를 활용한 실험을 진행함. 학교 주변 하천수를 직접 채취해 수산화나트륨과 과망간산칼륨용액을 넣고, 색 변화와 COD 비색표를 대조하여 오염 정도를 확인함. 실험 결과 하천 오염 정도가 보통보다 높다는 사실을 확인하고, 주변 아파트 건설로 인한 토양 분진이 탁도 상승의 원인일 수 있음을 분석함. 이어 난분해성 폐수처리기술인 IEO가 폐수를 처리하는 과정과 원리를 탐구하고, 기존 폐수처리장에 공정을 추가하는 방식으로 처리 효율을 높일 수 있음을 설명함.<div class="cs-point"><b>포인트</b> — 직접 채취·실험한 데이터를 해석하고, 원인 분석과 처리 기술 탐구까지 확장한 실증적 탐구입니다.</div></div>
+            </details>
+          </div>
+        </div>
+        <div>
+          <div class="blk">
+            <h4>제출물</h4>
+            <div class="subs"><span>탐구 계획서</span><span>논문·도서 분석 기록</span><span>심화 탐구 보고서</span><span>발표 자료·요약 카드</span></div>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>제출 전 점검</h4>
+            <div class="check" data-check>
+              <label><input type="checkbox">주제가 희망 전공과 직접 연결되는가</label>
+              <label><input type="checkbox">탐구 질문이 구체적인가</label>
+              <label><input type="checkbox">논문·도서·기사 등 자료가 충분한가</label>
+              <label><input type="checkbox">자료를 단순 요약하지 않고 내 관점으로 분석했는가</label>
+              <label><input type="checkbox">1·2학년 활동과의 연결 또는 3학년 심화가 드러나는가</label>
+            </div>
+            <div class="prog"><i></i></div>
+            <div class="prog-txt">0 / 5 항목 확인</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ACT 6 -->
+    <article class="act bd-club" id="act6" style="border-left-color:var(--club)">
+      <div class="act-head">
+        <div class="meta"><span class="pill bg-club">동아리 활동</span><span class="pill" style="background:#eef1fa;color:#39406b">개인/모둠</span><span class="pill rec">★ 추천</span></div>
+        <h3>6. 과제탐구형 심화연구반 <span class="st">★</span></h3>
+        <p class="desc">1·2학년 교과 활동과 연결되는 주제를 선정하고, 교과서·도서·논문을 바탕으로 심화 탐구 보고서를 작성하는 활동입니다. 3학년 정규동아리는 대부분 이 형태로 운영되며 DBpia, 전공별 추천도서, 논문분석활동지 등을 활용합니다.</p>
+      </div>
+      <div class="act-body">
+        <div>
+          <div class="blk">
+            <h4>활동 흐름</h4>
+            <ul class="tl">
+              <li data-n="1">1·2학년 교과 활동 돌아보기</li>
+              <li data-n="2">이어서 탐구할 수 있는 주제 고르기</li>
+              <li data-n="3">교과서 개념 정리하기</li>
+              <li data-n="4">도서·논문으로 심화하기</li>
+              <li data-n="5">교과 심화 탐구 보고서 작성하기</li>
+            </ul>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>우수 사례</h4>
+            <details class="case">
+              <summary><span class="cs-tag bg-club">의생명·실험형</span>생활 속 세균 배양 오염도 측정<span class="chev">▼</span></summary>
+              <div class="cs-body">감기의 직접적 원인인 바이러스는 학교 수준의 실험 도구로는 측정이 어렵다는 한계를 인식하고, 대안적으로 세균 배양을 통해 간접적인 오염도를 측정할 수 있다는 점에 착안함. 위생 지표균이 바이러스 오염과 상관관계를 가진다는 선행 연구를 탐독하며 생활 속 문제를 과학적으로 해석할 수 있다는 가능성을 확인함. 화장실 문, 교실 책상, 급식실 테이블, 컴퓨터 키보드 등에서 시료를 채취해 평판 도말법으로 배양한 결과, 급식실 테이블의 세균 수가 가장 높게 나타나 공동 사용 빈도와 위생 상태의 상관성을 입증함. 나아가 소독 시점에 따라 효과가 달라질 수 있다는 문제의식을 확장하여 실험군을 나누어 분석하고, 식사 직후 소독 시 세균 제거 효과가 가장 높음을 확인함.<div class="cs-point"><b>포인트</b> — 측정이 어려운 대상을 ‘간접 지표’로 우회하고, 소독 시점까지 변인을 나눠 분석한 실험 설계가 탄탄합니다.</div></div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-club">원자력·수학형</span>핵반응·질량 결손 심화 연구<span class="chev">▼</span></summary>
+              <div class="cs-body">물리학Ⅰ에서 배운 ‘핵반응의 원리와 질량 결손’에 대해 심화 연구함. 교과서 속 지식을 바탕으로 전문 서적과 논문을 분석하여 새롭게 알게 된 점을 보고서로 작성하고 발표함. 확률과 통계에서 배운 기하적 확률을 활용해 중성자와 원자핵의 반응 확률을 계산하고, 핵분열 시 생성되는 에너지를 계산하는 탐구 활동을 수행함. 계산 결과와 실제 수치 사이의 차이를 확인하고 오차가 생긴 원인을 분석하며, 중성자가 원자핵과 충돌할 확률이 중성자의 에너지와 원자핵의 종류에 따라 달라질 수 있음을 이해함. 이어 미분방정식의 개념과 풀이 방식을 학습하고, 변수분리법을 활용하여 방사성 동위원소의 반감기, 초기 질량, 특정 시점의 질량 사이의 관계를 함수로 나타냄.
+                <div class="cs-point"><b>포인트</b> — 여러 교과(물리·확통·미적분) 개념을 하나의 주제로 통합했습니다.</div>
+              </div>
+            </details>
+            <details class="case">
+              <summary><span class="cs-tag bg-club">수학·AI형</span>카즈단–루스티그 다항식 탐구<span class="chev">▼</span></summary>
+              <div class="cs-body">융합수학탐구반에서 경제·금융 관련 강연을 듣고 주식 모의투자를 경험한 뒤, 미래 유망 직업이 AI와 연관되어 있음을 인식함. 수학·과학 월간지를 탐독하면서 수학을 하는 AI를 개발한 사례를 접하고, 대칭군에 있는 두 집합의 변환 과정을 설명한 카즈단–루스티그 다항식에 관심을 가짐. 이후 6차 대칭군과 관련된 내용을 탐구하며, 컴퓨터가 수학 계산을 할 수 있게 되는 원리를 탐구하고 싶다는 포부를 밝힘. AI가 언어를 처리할 때 벡터와 행렬을 사용한다는 점을 깨닫고, 막연한 호기심을 수학적 학습 동기로 구체화함.<div class="cs-point"><b>포인트</b> — 막연한 호기심을 ‘왜 AI가 수학을 하는가’라는 구체적 질문으로 좁혀 학습 동기로 만든 과정이 좋습니다.</div></div>
+            </details>
+          </div>
+        </div>
+        <div>
+          <div class="blk">
+            <h4>제출물</h4>
+            <div class="subs"><span>교과 개념 정리</span><span>도서·논문 분석표</span><span>탐구 보고서</span><span>발표 자료</span></div>
+          </div>
+          <div class="blk" style="margin-top:24px">
+            <h4>제출 전 점검</h4>
+            <div class="check" data-check>
+              <label><input type="checkbox">1·2학년 교과 활동과 연결되는가</label>
+              <label><input type="checkbox">교과서 개념을 바탕으로 출발했는가</label>
+              <label><input type="checkbox">도서나 논문을 활용했는가</label>
+              <label><input type="checkbox">조사보다 분석·계산·비교·실험 설계가 드러나는가</label>
+              <label><input type="checkbox">탐구 결과의 한계나 후속 탐구가 있는가</label>
+            </div>
+            <div class="prog"><i></i></div>
+            <div class="prog-txt">0 / 5 항목 확인</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ACT 7 -->
+    <article class="act bd-sese" id="act7" style="border-left-color:var(--sese)">
+      <div class="act-head">
+        <div class="meta"><span class="pill bg-sese">개세특</span><span class="pill" style="background:#eef1fa;color:#39406b">개인/모둠</span><span class="pill rec">★ 추천</span></div>
+        <h3>7. 수업 유연화 주간 <span class="st">★</span></h3>
+        <p class="desc">AI·데이터·앱·웹·디지털 콘텐츠를 활용하여 진로와 연결된 산출물을 만드는 4일 프로젝트입니다. 주제 확정 → 자료 수집·설계 → 분석·제작 → 완성·공유·성찰의 흐름으로 진행합니다.</p>
+      </div>
+      <div class="act-body" style="grid-template-columns:1fr">
+        <div>
+          <div class="blk">
+            <h4>4일 활동 로드맵</h4>
+            <div class="days">
+              <div class="day"><b>DAY 1</b><div class="d-t">주제 확정·계획서</div><p>활동 계획서 제출, 자료·데이터 출처 후보 확보</p></div>
+              <div class="day"><b>DAY 2</b><div class="d-t">자료 수집·설계</div><p>수집 자료 출처 목록 정리</p></div>
+              <div class="day"><b>DAY 3</b><div class="d-t">분석·제작</div><p>중간 결과물 저장, 교사 피드백 1회 받기</p></div>
+              <div class="day"><b>DAY 4</b><div class="d-t">완성·공유·성찰</div><p>산출물 제출, 개인 활동 보고서 제출</p></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;margin-top:26px" class="act-body-inner">
+            <div class="blk">
+              <h4>우수 사례</h4>
+              <details class="case">
+                <summary><span class="cs-tag bg-sese">데이터 분석형</span>응급실 재이송 데이터 분석<span class="chev">▼</span></summary>
+                <div class="cs-body">AI 데이터 마이닝을 통한 탐구 주제 분석 프로그램에 참여하여 응급실 재이송 문제를 데이터 기반으로 분석함. 지역별 인구 수당 병상 수가 부족한 지역에서 재이송 사례가 많을 것이라는 가설을 세우고, 공공데이터포털과 통계청 자료를 전처리함. 지역당 연령별 인구수를 독립변수로, 병실 수를 종속변수로 설정한 뒤 선형회귀 분석 모델을 적용했으나, 변수 간 선형적 관계가 없다는 결론을 도출함. 이후 재이송 원인 중 병상 부족보다 전문의 부재가 더 큰 비율을 차지한다는 점을 확인하고, 다중공선성 문제와 차원 축소 방안을 탐구함.<div class="cs-point"><b>포인트</b> — 가설이 틀렸다는 결과에서 멈추지 않고, 원인을 재분석해 후속 기법(차원 축소)까지 나아갔습니다.</div></div>
+              </details>
+              <details class="case">
+                <summary><span class="cs-tag bg-sese">AI·데이터 분석형</span>뇌 오가노이드 형태학 데이터 분석<span class="chev">▼</span></summary>
+                <div class="cs-body">수업량 유연화 교육과정으로 AI 데이터 마이닝을 수강하고, 2학년 생명과학에서 탐구한 오가노이드와 연계하여 뇌 오가노이드의 정상 여부를 판별하기 위한 형태학적 데이터 탐구를 수행함. Kaggle에서 수집한 이미지 기반 데이터에서 가로·세로 길이, 면적, 둘레, 원형도 등 주요 물리적 특성을 정량화하여 CSV로 정제하고, 다양한 분류 알고리즘을 적용함. Orange 프로그램으로 시각화 및 이상치 탐지를 수행하며 각 지표가 예측에 미치는 영향을 분석함. 분석 결과 에이다부스트 모델이 92%, 로지스틱 회귀 모델이 88%의 정확도를 기록했으며, 원형도와 면적이 정상 여부를 가르는 주요 지표임을 확인함. 비정형 이미지 데이터를 정제하고 예측 모델로 구성하는 전 과정을 주도적으로 수행함.<div class="cs-point"><b>포인트</b> — ‘92% 정확도’처럼 성능을 수치로 제시하고, 어떤 변수가 결정적이었는지까지 분석한 점이 좋은 산출물의 요건을 충족합니다.</div></div>
+              </details>
+              <details class="case">
+                <summary><span class="cs-tag bg-sese">데이터·앱 제작형</span>미세먼지 환기 최적시간 + 실시간 알리미 개발<span class="chev">▼</span></summary>
+                <div class="cs-body">수업량 유연화 자율 교육과정 ‘데이터마이닝 주제 탐구’에서 학교 일과 중 미세먼지 노출을 최소화하기 위한 계절별 교실 환기 최적 시간대 산출을 주제로 탐구함. Orange3로 미세먼지 농도·계절·교시를 독립 변수, 환경부 기준 환기 등급을 종속 변수로 설정해 로지스틱 회귀와 의사결정트리로 환기 가능 여부를 권장·주의·금지 세 단계로 분류함. 나아가 과거 데이터 기반 분석이 실시간 변화를 반영하지 못한다는 한계를 인식하고, 환경부 대기질 오픈API와 웹훅을 연동한 ‘실시간 환기 금지 알리미’ 프로그램을 직접 개발하여 분석 결과를 실생활과 연계함.<div class="cs-point"><b>포인트</b> — 분석에서 그치지 않고 실제 작동하는 프로그램(웹·앱)까지 만든 사례로, 아래 AI 4DAY의 바이브 코딩 활동과 바로 연결됩니다.</div></div>
+              </details>
+              <div class="std-tip">💡 <b>산출물 기준 참고</b> · <u>AI 모델·챗봇형</u>은 작동하는 모델과 20회 이상 테스트 기록표·정확도·오답 원인 분석이, <u>바이브 코딩형</u>은 작동하는 웹·앱 프로토타입과 프롬프트 기록표·오류 해결 과정 기록이 필수 산출물입니다.</div>
+              <a class="linkbtn" href="https://kkw-web.github.io/YS-AI-4DAY/" target="_blank" rel="noopener"><span class="em">🔗</span> 학교자율과정 안내 페이지 열기</a>
+            </div>
+            <div class="blk">
+              <h4>제출물</h4>
+              <div class="subs"><span>활동 계획서</span><span>최종 산출물</span><span>개인 활동 보고서</span><span>자료 출처·도구 활용 기록</span></div>
+              <h4 style="margin-top:24px">제출 전 점검</h4>
+              <div class="check" data-check>
+                <label><input type="checkbox">주제가 진로·관심 분야와 연결되는가</label>
+                <label><input type="checkbox">계획서·산출물·개인 보고서가 모두 있는가</label>
+                <label><input type="checkbox">자료 출처와 도구 활용 기록이 남아 있는가</label>
+                <label><input type="checkbox">오류·시행착오·수정 과정이 기록되었는가</label>
+                <label><input type="checkbox">산출물의 한계와 후속 개선 방향이 있는가</label>
+              </div>
+              <div class="prog"><i></i></div>
+              <div class="prog-txt">0 / 5 항목 확인</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= COMPETENCY (from guidebook) ================= -->
+<section id="comp">
+  <div class="wrap">
+    <span class="sec-eyebrow">STEP 4 · 대학이 보는 눈</span>
+    <h2 class="sec-title">대학이 평가하는 3대 역량 🎓</h2>
+    <p class="sec-desc">학생부종합전형은 성적만이 아니라 <b>학업 역량 · 진로 역량 · 공동체 역량</b>을 중심으로 성장 과정과 잠재력을 평가합니다. (동국대·건국대 등 5개 대학 공통 평가요소 기반) 내 활동이 어떤 역량으로 읽히는지 확인하세요.</p>
+    <div class="comp-tabs">
+      <button class="comp-tab on" data-tab="c1">학업 역량</button>
+      <button class="comp-tab" data-tab="c2">진로 역량</button>
+      <button class="comp-tab" data-tab="c3">공동체 역량</button>
+    </div>
+
+    <div class="comp-panel on" id="c1">
+      <div class="comp-lead">학업을 수행하는 과정에서 보이는 <b>자기주도성·탐구력·심화 학습 능력</b>을 의미합니다.</div>
+      <div>
+        <h4>무엇을 평가하나요?</h4>
+        <ul>
+          <li><b>학업 성취도</b>교과목에서 성취한 학업적 성과</li>
+          <li><b>학업 태도</b>학습에 대한 태도와 지속적 노력, 자기주도적 학습 습관</li>
+          <li><b>탐구력</b>심화 학습과 연구를 통해 문제를 해결하는 능력</li>
+        </ul>
+      </div>
+      <div>
+        <h4>어떻게 키우나요?</h4>
+        <ul>
+          <li><b>교과 심화 학습</b>수업 내용을 바탕으로 추가 탐구 수행</li>
+          <li><b>자기주도적 연구</b>관심 분야 연구 주제 설정·실험·보고서 작성</li>
+          <li><b>독서 활동</b>전공 관련 도서를 읽고 감상문으로 생각 정리</li>
+          <li><b>학업 관련 프로젝트</b>수학·과학·사회 등 다양한 과목 프로젝트</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comp-panel" id="c2">
+      <div class="comp-lead">미래를 고민하고 구체적 목표를 설정해 준비하는 과정입니다. 대학은 목표 나열이 아니라 <b>'그 목표를 위해 어떤 노력을 했는지'</b>를 봅니다.</div>
+      <div>
+        <h4>무엇을 평가하나요?</h4>
+        <ul>
+          <li><b>전공 관련 교과 이수 노력</b>관심 전공 관련 교과목 이수·성과</li>
+          <li><b>전공 관련 교과 성취도</b>관련 과목을 얼마나 깊이 학습·성취했는지</li>
+          <li><b>진로 탐색 활동 경험</b>캠프·인턴십·연구·실험 등으로 방향 설정</li>
+        </ul>
+      </div>
+      <div>
+        <h4>어떻게 강화하나요?</h4>
+        <ul>
+          <li><b>전공 관련 활동 참여</b>관련 동아리·캠프·연구 활동에 적극 참여</li>
+          <li><b>진로 탐색 과정 기록</b>관심 계기·관련 학습·활동을 일관성 있게 정리</li>
+          <li><b>현장 체험·실무 경험</b>인턴십·전문가 인터뷰 등 실질 경험과 배움 기록</li>
+          <li><b>논문·보고서 작성</b>특정 주제를 깊이 분석해 논리적으로 정리</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comp-panel" id="c3">
+      <div class="comp-lead">단순 봉사를 넘어 <b>'다른 사람들과 협력하여 문제를 해결하는 능력'</b>을 의미합니다. 대학은 혼자 잘하는 학생보다 협업할 줄 아는 학생을 선호합니다.</div>
+      <div>
+        <h4>무엇을 평가하나요?</h4>
+        <ul>
+          <li><b>배려와 나눔</b>타인을 배려하고 나눔을 실천하는 태도</li>
+          <li><b>소통 및 협업</b>팀워크를 발휘하고 조화를 이루며 협력하는 능력</li>
+          <li><b>리더십</b>공동체 내에서 주도적 역할을 하며 책임감 있게 기여</li>
+        </ul>
+      </div>
+      <div>
+        <h4>어떻게 키우나요?</h4>
+        <ul>
+          <li><b>팀 프로젝트·협업 경험</b>조별 활동·동아리 프로젝트·연구팀 참여</li>
+          <li><b>학교·지역 사회 기여</b>학생회·멘토링·지역 봉사 등으로 리더십 함양</li>
+          <li><b>공익적 활동 참여</b>사회 문제 해결 캠페인·환경 보호·나눔 프로젝트 기획·실행</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GOOD vs BAD ================= -->
+<section id="goodbad">
+  <div class="wrap">
+    <span class="sec-eyebrow">STEP 5 · 결정적 차이</span>
+    <h2 class="sec-title">좋은 활동 vs 아쉬운 활동 ⚖️</h2>
+    <p class="sec-desc">같은 활동이라도 <b>어떻게 기록하느냐</b>에 따라 평가가 갈립니다. 왼쪽에서 오른쪽으로 한 걸음씩 밀어 올리는 것이 핵심입니다.</p>
+    <div class="ba-grid">
+      <div class="ba-col bad">
+        <h3>😐 아쉬운 활동 — 여기서 멈춤</h3>
+        <ul>
+          <li>강연을 들었다</li>
+          <li>책을 읽었다</li>
+          <li>뉴스를 조사했다</li>
+          <li>논문을 요약했다</li>
+          <li>실험을 했다</li>
+          <li>앱을 만들었다</li>
+          <li>보고서를 제출했다</li>
+        </ul>
+      </div>
+      <div class="ba-col good">
+        <h3>🚀 좋은 활동 — 한 걸음 더</h3>
+        <ul>
+          <li>강연에서 생긴 질문을 후속 탐구로 발전시켰다</li>
+          <li>책의 개념을 내 진로 주제 분석에 활용했다</li>
+          <li>쟁점을 정리하고 내 관점을 근거와 함께 제시했다</li>
+          <li>논문 속 개념·데이터를 내 질문에 맞게 재구성했다</li>
+          <li>변인을 설정하고 결과를 해석하며 한계를 분석했다</li>
+          <li>사용자의 문제를 정의하고 테스트 후 개선했다</li>
+          <li>한계와 후속 탐구까지 제안했다</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ex-box">
+      <h3>✍️ 생기부 문장, 이렇게 바뀝니다 (가이드북 예시)</h3>
+      <div class="ex-pair">
+        <div class="ex bad"><span class="lbl">잘못된 예시</span>'수학 동아리에서 활동하며 수학 문제를 풀었다.'</div>
+        <div class="ex good"><span class="lbl">좋은 예시</span>'수학 동아리에서 복소수를 주제로 발표를 준비하면서, 기존 교과 과정에서 다루지 않는 개념을 이해하는 것이 쉽지 않았다. 하지만 팀원들과 토론하며 개념을 정리했고, 발표를 통해 복소수의 기하학적 해석 방법을 다른 학생들과 공유할 수 있었다. 이 경험을 통해 어려운 개념도 협업을 통해 해결할 수 있음을 깨달았다.'</div>
+      </div>
+      <div class="ex-pair" style="margin-top:14px">
+        <div class="ex bad"><span class="lbl">잘못된 예시</span>'심리학에 관심이 있어 책을 읽었다.'</div>
+        <div class="ex good"><span class="lbl">좋은 예시</span>'심리학에 관심이 생겨 『스키너의 심리상자 열기』를 읽고, 행동주의 심리학에 대한 이해를 확장했다. 이후 학교 심리학 동아리에서 스스로 연구 주제를 정해 보상과 학습 효과에 대한 실험을 설계하고 결과를 분석했다. 이를 통해 학문적 탐구에 대한 흥미를 더욱 키울 수 있었다.'</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REPORT FRAME ================= -->
+<section id="report">
+  <div class="wrap">
+    <span class="sec-eyebrow">STEP 6 · 마무리</span>
+    <h2 class="sec-title">최종 보고서, 이 9칸으로 완성 🧩</h2>
+    <p class="sec-desc">어떤 활동을 하든 마지막 개인 활동 보고서는 아래 틀을 채우면 됩니다. 이 9칸이 곧 '주제 선정 → 자료 → 분석 → 결과물 → 성찰'의 흐름입니다.</p>
+    <div class="rep-grid">
+      <div class="rep"><span class="n">1</span><b>탐구 주제</b><p>한 문장으로 명확하게</p></div>
+      <div class="rep"><span class="n">2</span><b>선정 이유</b><p>왜 이 주제를 선택했는지</p></div>
+      <div class="rep"><span class="n">3</span><b>진로 관련성</b><p>희망 학과·관심 분야와 연결</p></div>
+      <div class="rep"><span class="n">4</span><b>활용 자료</b><p>뉴스·도서·논문·통계·강연 출처</p></div>
+      <div class="rep"><span class="n">5</span><b>활동 과정</b><p>조사·분석·제작을 순서대로</p></div>
+      <div class="rep"><span class="n">6</span><b>결과물</b><p>보고서·발표·앱·웹·카드뉴스</p></div>
+      <div class="rep"><span class="n">7</span><b>어려움과 해결</b><p>막혔던 점과 해결 과정</p></div>
+      <div class="rep"><span class="n">8</span><b>알게 된 점</b><p>새롭게 이해한 내용</p></div>
+      <div class="rep"><span class="n">9</span><b>한계와 후속 탐구</b><p>더 탐구하고 싶은 점</p></div>
+    </div>
+
+    <div class="outro">
+      <h2>완벽한 결과물이 목표가 아닙니다.</h2>
+      <p>중요한 것은 내가 무엇에 관심이 있고, 그 관심을 어떻게 탐구로 발전시켰으며, 그 과정에서 무엇을 배우고 성장했는지 보여 주는 것입니다. 하나의 활동을 선택하더라도 아래 흐름이 분명하다면, 그 활동은 학생부에서 충분히 의미 있는 기록이 됩니다.</p>
+      <div class="flow-mini">
+        <span>🎯 주제 선정</span><span>🔍 자료 탐색</span><span>🧪 분석</span><span>📢 결과물</span><span>🌱 성찰</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="privacy-note"><div>ℹ️ 본 페이지의 우수 사례는 <b>교내용 참고 사례</b>이며, 학생 개인정보 보호를 위해 요약형으로 정리되었습니다. 외부 공개·공유 시 개인정보 및 학생부 외부 유출에 유의해 주세요.</div></div>
+
+<footer>
+  <b>동국대학교사범대학부속영석고등학교</b> · 학생부 역량 강화 프로그램 활동 안내<br>
+  나의 진로를 학생부 속 탐구로 연결하는 3학년 활동 로드맵 · 참고: 2027 동대부속영석고 학생부위주전형 가이드북
+</footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로">↑</button>
+
+<script>
+// finder -> scroll & highlight
+document.querySelectorAll('.finder-card').forEach(function(c){
+  c.addEventListener('click',function(){
+    var el=document.getElementById(c.dataset.go);
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});el.classList.remove('hl');void el.offsetWidth;el.classList.add('hl');}
+  });
+});
+// checklists
+document.querySelectorAll('[data-check]').forEach(function(box){
+  var total=box.querySelectorAll('input').length;
+  var bar=box.parentElement.querySelector('.prog i');
+  var txt=box.parentElement.querySelector('.prog-txt');
+  box.addEventListener('change',function(){
+    var done=box.querySelectorAll('input:checked').length;
+    bar.style.width=(done/total*100)+'%';
+    txt.textContent=done+' / '+total+' 항목 확인';
+    if(done===total){txt.textContent='✅ 모든 항목 확인 완료! 제출 준비 OK';}
+  });
+});
+// competency tabs
+document.querySelectorAll('.comp-tab').forEach(function(t){
+  t.addEventListener('click',function(){
+    document.querySelectorAll('.comp-tab').forEach(function(x){x.classList.remove('on')});
+    document.querySelectorAll('.comp-panel').forEach(function(x){x.classList.remove('on')});
+    t.classList.add('on');
+    document.getElementById(t.dataset.tab).classList.add('on');
+  });
+});
+// back to top
+var tb=document.getElementById('topBtn');
+window.addEventListener('scroll',function(){
+  if(window.scrollY>600){tb.classList.add('show')}else{tb.classList.remove('show')}
+});
+tb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+</body>
+</html>
